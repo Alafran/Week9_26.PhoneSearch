@@ -55,6 +55,9 @@ public class UserDatabase {
         return userList;
     }
 
+    //checks to make sure theres a user with the name given before setting address
+    //the .equals("Unknown") is because when a user is created their address
+    // is initialized as "Unknown"
     public void printInfo(String name) {
         if (this.users.get(name).getStreetName().equals("Unknown")) {
             System.out.println("address unknown");
